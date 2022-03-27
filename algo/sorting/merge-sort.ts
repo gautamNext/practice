@@ -1,21 +1,21 @@
-function merge(arr1, arr2) {
+function merge(list1, list2) {
   let tempArr = [];
   let arr1Index = 0,
     arr2Index = 0;
-  while (arr1Index < arr1.length && arr2Index < arr2.length) {
-    if (arr1[arr1Index] <= arr2[arr2Index]) {
-      tempArr.push(arr1[arr1Index++]);
+  while (arr1Index < list1.length && arr2Index < list2.length) {
+    if (list1[arr1Index] <= list2[arr2Index]) {
+      tempArr.push(list1[arr1Index++]);
     } else {
-      tempArr.push(arr2[arr2Index++]);
+      tempArr.push(list2[arr2Index++]);
     }
   }
 
-  if (arr1Index < arr1.length) {
-    tempArr = [...tempArr, ...arr1.slice(arr1Index)];
+  if (arr1Index < list1.length) {
+    tempArr = [...tempArr, ...list1.slice(arr1Index)];
   }
 
-  if (arr2Index < arr2.length) {
-    tempArr = [...tempArr, ...arr2.slice(arr2Index)];
+  if (arr2Index < list2.length) {
+    tempArr = [...tempArr, ...list2.slice(arr2Index)];
   }
 
   return tempArr;
